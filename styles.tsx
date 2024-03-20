@@ -139,8 +139,8 @@ const styles =  StyleSheet.create({
         justifyContent: 'space-between',
       },
       MovimientoItem: {
-        width: '50%', // Ajusta según tus necesidades
-        marginBottom: 10, // Ajusta según tus necesidades
+        width: '50%',
+        marginBottom: 10,
         padding: 10,
         borderRadius: 5,
       },

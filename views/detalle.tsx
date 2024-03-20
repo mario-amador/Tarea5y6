@@ -9,7 +9,7 @@ const Detalle = ({ navigation, route }) => {
   const [pokemon, setPokemon] = useState<Pokemon>();
   const [statsNature, setStatsNature] = useState<any[]>([]);
   const [pokemonSpecies, setPokemonSpecies] = useState<any>();
-  const [moves, setMoves] = useState<any[]>([]); // Estado para almacenar los movimientos
+  const [moves, setMoves] = useState<any[]>([]);
 
   const cargarPokemones = async () => {
     const codigo = route.params.codigo;
@@ -18,7 +18,7 @@ const Detalle = ({ navigation, route }) => {
       setPokemon(resultados.data);
       cargarStatsNature(resultados.data.id);
       cargarPokemonSpecies(resultados.data.species.url);
-      cargarMovimientos(resultados.data.moves); // Llama a la función para cargar los movimientos
+      cargarMovimientos(resultados.data.moves);
     }
   };
 
@@ -50,14 +50,14 @@ const Detalle = ({ navigation, route }) => {
   }, []);
 
   const renderProgressBar = (statValue: number) => {
-    const progress = statValue / 100; // Assuming max stat value is 100
+    const progress = statValue / 100;
     return (
       <ProgressBarAndroid
         styleAttr="Horizontal"
         indeterminate={false}
         progress={progress}
         style={styles.progressBar}
-        color="#4CAF50" // You can change the color here
+        color="#4CAF50"
       />
     );
   };
